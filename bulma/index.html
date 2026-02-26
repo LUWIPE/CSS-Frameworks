@@ -2,15 +2,328 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="48x48" href="../images/favicon-48x48.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="48x48"
+      href="../images/favicon-48x48.png"
+    />
 
     <link rel="stylesheet" href="./css/main.css" />
 
     <title>Bulma</title>
   </head>
   <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img src="../images/logo.png" alt="Logo">
+        </a>
 
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasic" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a href="../index.html" class="has-text-primary">
+              <div class="icon-text">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                  </svg>
+                </div>
+                <div>Vælg CSS Framework</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-4">
+      <div class="columns">
+        <div class="column is-8">
+          <div class="box mb-4">
+            <h2 class="title is-2 mb-2">Hvem er jeg?</h2>
+            <div class="content">
+              <p>
+                Jeg hedder Lukas, er 24 år og bor i Sakskøbing. Til daglig
+                studerer jeg webudvikling på Zealand i Roskilde, hvor jeg
+                fordyber mig i udvikling af moderne og funktionelle
+                webløsninger. Her arbejder jeg med både frontend og backend og
+                har særligt fokus på struktur, brugervenlighed og performance.
+                Jeg brænder for at omsætte idéer til digitale løsninger, der
+                både er teknisk solide og intuitive at bruge.
+              </p>
+              <p>
+                Jeg er uddannet multimediedesigner fra Zealand i Nykøbing F,
+                hvor jeg har arbejdet med design, målgruppeforståelse,
+                interfaceudvikling og test af prototyper. Kombinationen af min
+                designmæssige baggrund og min tekniske overbygning inden for
+                webudvikling giver mig en helhedsforståelse for digitale
+                produkter og gør mig i stand til at skabe løsninger, der både er
+                æstetisk tiltalende og funktionelle.
+              </p>
+              <p>
+                Jeg har erfaring med HTML, CSS, JavaScript og PHP, og jeg har
+                arbejdet med frameworks som React, Vue og Laravel. Jeg er altid
+                nysgerrig efter at lære nye teknologier og forbedre mine
+                færdigheder inden for webudvikling.
+              </p>
+              <p>
+                Ved siden af studiet har sport altid fyldt meget i mit liv. Jeg
+                spiller fodbold og har tidligere gået til gymnastik, hvilket har
+                givet mig en stærk disciplin og holdånd. Jeg har også taget
+                fodbolddommeruddannelsen og været aktiv dommer i en periode,
+                hvilket har styrket min evne til at træffe beslutninger og
+                bevare overblikket under pres.
+              </p>
+              <p>
+                Jeg er en engageret og ambitiøs person, der altid stræber efter
+                at levere mit bedste. Jeg er vant til at arbejde både
+                selvstændigt og i teams, og jeg trives i et miljø, hvor jeg kan
+                bidrage med mine idéer og lære af andre. Jeg ser frem til at
+                fortsætte min udvikling som webudvikler og skabe innovative
+                løsninger, der gør en forskel for brugerne.
+              </p>
+            </div>
+          </div>
+
+          <div class="box mb-4">
+            <h2 class="title is-2 mb-4">Mine projekter</h2>
+            <div class="content">
+              <h3 class="title is-4">
+                <a href="#" class="has-text-dark">
+                  <div class="icon-text">
+                    <div>1. semester projekt - Webudvikling</div>
+                    <div class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </h3>
+              <div class="columns">
+                <div class="column is-three-quarters">
+                  <p>
+                    Eksamens projekt på 1. semster af Webudvikling med
+                    temaet "find et udækket behov med fokus på bæredygtighed
+                    og lav en løsning til det".
+                  </p>
+                  <p>
+                    I projektet er der lavet en app, der sakl hjælpe folk
+                    med at pante, da det er et område, hvor der er et stort
+                    behov for forbedring i forhold til bæredygtighed. Det
+                    primære formål med appen er at gøre det nemmere for folk
+                    der har langt til nærmeste pantstation, at få deres pant
+                    afleveret og dermed øge mængden af pant, der bliver
+                    afleveret. I appen kan brugerne oprette en profil,
+                    scanne deres pant og få det afhentet af en anden bruger,
+                    der så afleverer det på en pantstation.
+                  </p>
+                  <p>
+                    I projektet er der arbejdet med både frontend og
+                    backend, hvor der er brugt VUE til frontend og API til
+                    backend. Udover det har er der også arbejdet med
+                    UX-principper som design og brugeroplevelse, hvor der
+                    har været fokuseret på at skabe en intuitiv og
+                    brugervenlig app.
+                  </p>
+                </div>
+                <div class="column is-one-quarter">
+                  <figure class="image">
+                    <img src="../images/1-semester-projekt-webudvikling.png" alt="1. semester projekt" class="is-rounded">
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box mb-4">
+            <h2 class="title is-2 mb-4">Min arbejdserfaring</h2>
+            <div class="columns is-multiline">
+              <div class="column is-half">
+                <div class="box has-border">
+                  <div class="columns is-vcentered">
+                    <div class="column is-narrow">
+                      <figure class="image is-64x64">
+                        <img src="../images/DBU-logo.jpg" alt="DBU logo" class="is-rounded">
+                      </figure>
+                    </div>
+                    <div class="column has-text-centered">
+                      <h4 class="title is-5 mb-2">Fodbolddommer</h4>
+                      <p class="subtitle is-6 mb-2">December 2016 - Juni 2023</p>
+                      <p class="has-text-weight-bold">DBU Lolland-Falster</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-half">
+                <div class="box has-border">
+                  <div class="columns is-vcentered">
+                    <div class="column is-narrow">
+                      <figure class="image is-64x64">
+                        <img src="../images/GBSK-logo.png" alt="GBSK logo" class="is-rounded">
+                      </figure>
+                    </div>
+                    <div class="column has-text-centered">
+                      <h4 class="title is-5 mb-2">Lærer og pædagogvikar</h4>
+                      <p class="subtitle is-6 mb-2">August 2021 - Juni 2023</p>
+                      <p class="has-text-weight-bold">Guldborgsund Kommune</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-half">
+                <div class="box has-border">
+                  <div class="columns is-vcentered">
+                    <div class="column is-narrow">
+                      <figure class="image is-64x64">
+                        <img src="../images/BLF-logo.jpeg" alt="BLF logo" class="is-rounded">
+                      </figure>
+                    </div>
+                    <div class="column has-text-centered">
+                      <h4 class="title is-5 mb-2">SoMe Assistent</h4>
+                      <p class="subtitle is-6 mb-2">August 2024 - April 2025</p>
+                      <p class="has-text-weight-bold">Business Lolland-Falster</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-half">
+                <div class="box has-border">
+                  <div class="columns is-vcentered">
+                    <div class="column is-narrow">
+                      <figure class="image is-64x64">
+                        <img src="../images/AGILEX-logo.png" alt="AGILEX logo" class="is-rounded">
+                      </figure>
+                    </div>
+                    <div class="column has-text-centered">
+                      <h4 class="title is-5 mb-2">Praktikant</h4>
+                      <p class="subtitle is-6 mb-2">Januar 2025 - April 2025</p>
+                      <p class="has-text-weight-bold">Agilex</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-half">
+                <div class="box has-border">
+                  <div class="columns is-vcentered">
+                    <div class="column is-narrow">
+                      <figure class="image is-64x64">
+                        <img src="../images/AGILEX-logo.png" alt="AGILEX logo" class="is-rounded">
+                      </figure>
+                    </div>
+                    <div class="column has-text-centered">
+                      <h4 class="title is-5 mb-2">Juniorudvikler</h4>
+                      <p class="subtitle is-6 mb-2">Juni 2025 - Januar 2026</p>
+                      <p class="has-text-weight-bold">Agilex</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image">
+                <img src="../images/me.jpg" alt="mig">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <div class="mb-3">
+                  <h2 class="title is-4 mb-1">Lukas William Pedersen</h2>
+                  <h4 class="subtitle is-5 mb-2">Webudvikler</h4>
+                </div>
+                <div class="mb-3">
+                  <strong>Alder:</strong>
+                  <p>24 år (27. oktober 2001)</p>
+                </div>
+                <div class="mb-3">
+                  <strong>Bopæl:</strong>
+                  <p>Sakskøbing, Lolland</p>
+                </div>
+                <div class="mb-3">
+                  <strong>Uddannelse:</strong>
+                  <p>Multimediedesigner (PA)</p>
+                  <p>Webudvikling (PBA)</p>
+                </div>
+                <div class="mb-3">
+                  <strong class="mb-0">Færdigheder:</strong>
+                  <ul class="mt-0">
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>React, Vue</li>
+                    <li>Laravel</li>
+                    <li>MySQL, API</li>
+                    <li>Meta og LinkedIn SoMe</li>
+                  </ul>
+                </div>
+                <div class="mb-3">
+                  <strong>Kontakt:</strong>
+                  <ul class="mt-0">
+                    <li>
+                      <a href="https://www.linkedin.com/in/lukas-william-pedersen-1b742528b/" target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:lukaswp2710@gmail.com" target="_blank" rel="noopener noreferrer">
+                        E-mail: lukaswp2710@gmail.com
+                      </a>
+                    </li>
+                    <li>
+                      <a href="tel:51159966" target="_blank" rel="noopener noreferrer">
+                        Telefon: 51159966
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      });
+    </script>
   </body>
 </html>

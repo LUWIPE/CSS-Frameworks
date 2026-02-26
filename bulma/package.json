@@ -4,8 +4,8 @@
     "sass": "^1.97.3"
   },
   "scripts": {
-    "build:css": "npx sass --load-path=node_modules scss/main.scss css/main.css",
-    "dev": "npx sass --load-path=node_modules --watch scss/main.scss css/main.css"
+    "build:css": "npx sass --load-path=node_modules --source-map scss/main.scss css/main.css",
+    "dev": "npx sass --load-path=node_modules --watch --source-map scss/main.scss css/main.css"
   }
 }
 
