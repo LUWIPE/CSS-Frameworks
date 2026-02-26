@@ -1,0 +1,47 @@
+// Custom variables for Bootstrap
+$primary: #79c6c7;
+$secondary: #434646;
+$tertiary: #f3feff;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+
+// Import Bootstrap
+@import "../../bootstrap/bootstrap/node_modules/bootstrap/scss/bootstrap";
+
+// Additional custom styles can go here
+body {
+    background: linear-gradient(180deg, $secondary 0%, $primary 15%, $tertiary 40%, $tertiary 100%, $secondary 100%);
+}
+
+a{
+    color: #212529 !important;
+    text-decoration: none;
+}
+a:hover {
+    color: $secondary !important;
+    text-decoration: underline;
+}
+
+a.nav-link {
+    color: $primary !important;
+    font-size: larger;
+}
+a.nav-link:hover {
+    color: $tertiary !important;
+}
+a .nav-link i {
+    color: $secondary !important;
+    font-size: larger;
+}
+
+ul li a {
+    color: #212529 !important;
+    text-decoration: none;
+    font-size: medium;
+}
+ul li a:hover {
+    color: $secondary !important;
+    text-decoration: underline;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "bootstrap-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass ../scss/main.scss:../css/main.css",
+    "watch": "sass --watch ../scss/main.scss:../css/main.css",
+    "dev": "npm run build && npm run watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["bootstrap", "css", "scss", "framework"],
+  "author": "",
+  "license": "ISC",
+  "description": "Bootstrap demonstration with custom SCSS compilation",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
+}

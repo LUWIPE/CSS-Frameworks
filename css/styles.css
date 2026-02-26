@@ -1,0 +1,82 @@
+h1 {
+    font-size: 36px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 15px;
+}
+
+.nav-box {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+a .nav-box:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+a .nav-box img {
+    height: 300px;
+    width: 300px;
+    border-radius: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.container img {
+    height: 70px;
+    width: 50px;
+}
