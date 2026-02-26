@@ -3,12 +3,395 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="48x48" href="../images/favicon-48x48.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#79c6c7",
+              secondary: "#434646",
+              tertiary: "#f3feff",
+              success: "#28a745",
+              error: "#dc3545",
+              warning: "#ffc107",
+              info: "#17a2b8",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-gradient-to-b from-secondary via-primary via-[15%] to-tertiary;
+          min-height: 100vh;
+        }
+      }
+    </style>
     <title>Tailwind</title>
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <nav class="relative bg-secondary">
+      <div class="mx-auto max-w-7xl px-1">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="flex shrink-0 items-center">
+            <img src="../images/logo.png" alt="Logo" class="h-10 w-auto" />
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <a
+                href="../index.html"
+                aria-current="page"
+                class="text-normal font-medium text-primary hover:text-tertiary hover:underline flex items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4 mr-1"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                  />
+                </svg>
+                Vælg CSS Framework
+              </a>
+            </div>
+          </div>
+          <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+            <button
+              type="button"
+              onclick="toggleMobileMenu()"
+              class="relative inline-flex items-center justify-center rounded-md p-2 border border-primary"
+            >
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6 menu-hamburger stroke-primary"
+              >
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6 menu-close hidden stroke-primary"
+              >
+                <path
+                  d="M6 18 18 6M6 6l12 12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden sm:hidden">
+        <div class="space-y-1 px-2 pt-2 pb-3 flex justify-end">
+          <a
+            href="../index.html"
+            aria-current="page"
+            class="text-normal font-medium text-primary hover:text-tertiary hover:underline flex items-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4 mr-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+              />
+            </svg>
+            Vælg CSS Framework
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container mx-auto py-4">
+      <div class="grid grid-cols-4 gap-4 p-4">
+        <div class="col-span-3 w-full">
+          <div class="grid gap-4">
+            <div class="rounded-lg bg-white p-4 shadow-md w-full">
+              <h2 class="text-4xl font-bold mb-2">Hvem er jeg?</h2>
+              <p class="mb-2">
+                Jeg hedder Lukas, er 24 år og bor i Sakskøbing. Til daglig
+                studerer jeg webudvikling på Zealand i Roskilde, hvor jeg
+                fordyber mig i udvikling af moderne og funktionelle
+                webløsninger. Her arbejder jeg med både frontend og backend og
+                har særligt fokus på struktur, brugervenlighed og performance.
+                Jeg brænder for at omsætte idéer til digitale løsninger, der
+                både er teknisk solide og intuitive at bruge.
+              </p>
+              <p class="mb-2">
+                Jeg er uddannet multimediedesigner fra Zealand i Nykøbing F,
+                hvor jeg har arbejdet med design, målgruppeforståelse,
+                interfaceudvikling og test af prototyper. Kombinationen af min
+                designmæssige baggrund og min tekniske overbygning inden for
+                webudvikling giver mig en helhedsforståelse for digitale
+                produkter og gør mig i stand til at skabe løsninger, der både er
+                æstetisk tiltalende og funktionelle.
+              </p>
+              <p class="mb-2">
+                Jeg har erfaring med HTML, CSS, JavaScript og PHP, og jeg har
+                arbejdet med frameworks som React, Vue og Laravel. Jeg er altid
+                nysgerrig efter at lære nye teknologier og forbedre mine
+                færdigheder inden for webudvikling.
+              </p>
+              <p class="mb-2">
+                Ved siden af studiet har sport altid fyldt meget i mit liv. Jeg
+                spiller fodbold og har tidligere gået til gymnastik, hvilket har
+                givet mig en stærk disciplin og holdånd. Jeg har også taget
+                fodbolddommeruddannelsen og været aktiv dommer i en periode,
+                hvilket har styrket min evne til at træffe beslutninger og
+                bevare overblikket under pres.
+              </p>
+              <p class="mb-2">
+                Jeg er en engageret og ambitiøs person, der altid stræber efter
+                at levere mit bedste. Jeg er vant til at arbejde både
+                selvstændigt og i teams, og jeg trives i et miljø, hvor jeg kan
+                bidrage med mine idéer og lære af andre. Jeg ser frem til at
+                fortsætte min udvikling som webudvikler og skabe innovative
+                løsninger, der gør en forskel for brugerne.
+              </p>
+            </div>
+            <div class="rounded-lg bg-white p-4 shadow-md w-full">
+              <h2 class="text-4xl font-bold mb-2">Mine projekter</h2>
+              <div>
+                <div>
+                  <a
+                    href="#"
+                    aria-current="page"
+                    class="text-2xl font-semibold hover:text-secondary hover:underline flex items-center mb-1"
+                  >
+                    1. semester projekt - Webudvikling
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-4 ml-1"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                      />
+                    </svg>
+                  </a>
+                  <div class="grid grid-cols-5 gap-4">
+                    <div class="col-span-4">
+                      <p class="mb-2">
+                        Eksamens projekt på 1. semster af Webudvikling med
+                        temaet "find et udækket behov med fokus på bæredygtighed
+                        og lav en løsning til det".
+                      </p>
+                      <p class="mb-2">
+                        I projektet er der lavet en app, der sakl hjælpe folk
+                        med at pante, da det er et område, hvor der er et stort
+                        behov for forbedring i forhold til bæredygtighed. Det
+                        primære formål med appen er at gøre det nemmere for folk
+                        der har langt til nærmeste pantstation, at få deres pant
+                        afleveret og dermed øge mængden af pant, der bliver
+                        afleveret. I appen kan brugerne oprette en profil,
+                        scanne deres pant og få det afhentet af en anden bruger,
+                        der så afleverer det på en pantstation.
+                      </p>
+                      <p class="mb-2">
+                        I projektet er der arbejdet med både frontend og
+                        backend, hvor der er brugt VUE til frontend og API til
+                        backend. Udover det har er der også arbejdet med
+                        UX-principper som design og brugeroplevelse, hvor der
+                        har været fokuseret på at skabe en intuitiv og
+                        brugervenlig app.
+                      </p>
+                    </div>
+                    <div class="col-span-1">
+                      <img
+                        src="../images/1-semester-projekt-webudvikling.png"
+                        alt="1. semester projekt"
+                        class="rounded-lg shadow-lg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-lg bg-white p-4 shadow-md w-full">
+              <h2 class="text-4xl font-bold mb-4">Min arbejdserfaring</h2>
+              <div class="grid grid-cols-2 gap-3">
+                  <div class="grid grid-cols-4 gap-4 items-center border border-secondary rounded-lg p-2">
+                      <div class="col-span-1">
+                          <img src="../images/DBU-logo.jpg" alt="DBU logo" class="rounded-lg shadow-lg">
+                      </div>
+                      <div class="col-span-3 text-center">
+                          <h4 class="text-2xl font-semibold">Fodbolddommer</h4>
+                          <p class="text-lg">December 2016 - Juni 2023</p>
+                          <strong class="text-xl">DBU Lolland-Falster</strong>
+                      </div>
+                  </div>
+                  <div class="grid grid-cols-4 gap-4 items-center border border-secondary rounded-lg p-2">
+                      <div class="col-span-1">
+                          <img src="../images/GBSK-logo.png" alt="GBSK logo" class="rounded-lg shadow-lg">
+                      </div>
+                      <div class="col-span-3 text-center">
+                          <h4 class="text-2xl font-semibold">Lærer og pædagogvikar</h4>
+                          <p class="text-lg">August 2021 - Juni 2023</p>
+                          <strong class="text-xl">Guldborgsund Kommune</strong>
+                      </div>
+                  </div>
+                  <div class="grid grid-cols-4 gap-4 items-center border border-secondary rounded-lg p-2">
+                      <div class="col-span-1">
+                          <img src="../images/BLF-logo.jpeg" alt="BLF logo" class="rounded-lg shadow-lg">
+                      </div>
+                      <div class="col-span-3 text-center">
+                          <h4 class="text-2xl font-semibold">SoMe Assistent</h4>
+                          <p class="text-lg">August 2024 - April 2025</p>
+                          <strong class="text-xl">Business Lolland-Falster</strong>
+                      </div>
+                  </div>
+                  <div class="grid grid-cols-4 gap-4 items-center border border-secondary rounded-lg p-2">
+                      <div class="col-span-1">
+                          <img src="../images/AGILEX-logo.png" alt="AGILEX logo" class="rounded-lg shadow-lg">
+                      </div>
+                      <div class="col-span-3 text-center">
+                          <h4 class="text-2xl font-semibold">Juniorudvikler - Praktikant</h4>
+                          <p class="text-lg">Januar 2025 - April 2025</p>
+                          <strong class="text-xl">Agilex</strong>
+                      </div>
+                  </div>
+                  <div class="grid grid-cols-4 gap-4 items-center border border-secondary rounded-lg p-2">
+                      <div class="col-span-1">
+                          <img src="../images/AGILEX-logo.png" alt="AGILEX logo" class="rounded-lg shadow-lg">
+                      </div>
+                      <div class="col-span-3 text-center">
+                          <h4 class="text-2xl font-semibold">Juniorudvikler</h4>
+                          <p class="text-lg">Juni 2025 - Januar 2026</p>
+                          <strong class="text-xl">Agilex</strong>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="grid gap-4">
+            <div class="rounded-lg bg-white shadow-md w-full">
+              <img
+                src="../images/me.jpg"
+                alt="mig"
+                class="w-full rounded-t-lg"
+              />
+              <div class="p-3">
+                <div class="mb-2">
+                  <h2 class="text-2xl font-bold">Lukas William Pedersen</h2>
+                  <h4 class="text-xl font-semibold">Webudvikler</h4>
+                </div>
+                <div class="mb-2">
+                  <strong>Alder:</strong>
+                  <p>24 år (27. oktober 2001)</p>
+                </div>
+                <div class="mb-2">
+                  <strong>Bobæl:</strong>
+                  <p>Sakskøbing, Lolland</p>
+                </div>
+                <div class="mb-2">
+                  <strong>Uddannelse:</strong>
+                  <p>Multimediedesinger (PA)</p>
+                  <p>Webudvikling (PBA),</p>
+                </div>
+                <div class="mb-2">
+                  <strong>Færdigheder:</strong>
+                  <ul class="list-unstyled">
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>React, Vue</li>
+                    <li>Laravel</li>
+                    <li>MySQL, API</li>
+                    <li>Meta og LinkedIn SoMe</li>
+                  </ul>
+                </div>
+                <div class="mb-2">
+                  <strong>Kontakt:</strong>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/lukas-william-pedersen-1b742528b/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        LinkedIn
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="mailto:lukaswp2710@gmail.com"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        E-mail: lukaswp2710@gmail.com
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="tel:51159966"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        Telefon: 51159966
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobile-menu");
+        const hamburger = document.querySelector(".menu-hamburger");
+        const close = document.querySelector(".menu-close");
+
+        if (mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove("hidden");
+          hamburger.classList.add("hidden");
+          close.classList.remove("hidden");
+        } else {
+          mobileMenu.classList.add("hidden");
+          hamburger.classList.remove("hidden");
+          close.classList.add("hidden");
+        }
+      }
+    </script>
   </body>
 </html>
